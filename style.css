@@ -1,0 +1,179 @@
+/* remove all the default styling  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #e9c651, #e98468);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+
+}
+
+header {
+    font-size: 2rem;
+
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+form button,
+form input {
+
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+
+form button {
+
+    color: #ff6f47;
+    background: #f7fffe;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+form button:hover {
+    color: white;
+    background: #ff6f47;
+}
+
+
+
+/* main div */
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* main ul */
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+/* todoDiv item that contain li(todo-item) and two buttons */
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+
+}
+
+.newInput {
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    border: none;
+    display: none;
+}
+
+.show {
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    border: none;
+}
+
+/*li item only without buttons*/
+.todo li {
+    /* push the buttons at the end */
+    flex: 1;
+    padding: 0rem 0.5rem;
+
+}
+
+
+
+.trash-btn,
+.complete-btn {
+    background: #f33906;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background: rgb(75, 204, 73);
+}
+
+/* disable possibility of clicking on icon only rather than button */
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+/* create animatio for completed and deleted buttons */
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* reset default style for select */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: 0 important !;
+    border-radius: 0%;
+    background-image: none;
+
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+/* styiling the div with class 'select' */
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select:after {
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* .select:hover::after {
+    background: white;
+    color: #ff6f47;
+} */
